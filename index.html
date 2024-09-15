@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Musique - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Utilisation d'une image locale pour les paillettes */
+        .background {
+            background: url('images/fon_music.png') repeat; /* Remplace par ton image locale */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Animation de lumière autour des éléments */
+        .glow {
+            box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 60px #00ccff;
+        }
+
+        /* Conteneur principal */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            grid-gap: 20px;
+            position: relative;
+        }
+
+        /* Titre principal */
+        .titre {
+            grid-column: span 2;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            border-bottom: 3px solid #00ccff;
+        }
+
+        /* Description de la musique IA */
+        .description {
+            background-color: #222;
+            padding: 20px;
+            border: 2px solid #00ccff;
+            border-radius: 8px;
+            animation: glow-border 3s infinite;
+            color: #ddd;
+        }
+
+        /* Animation pour les bordures */
+        @keyframes glow-border {
+            0% {
+                border-color: #00ccff;
+            }
+            50% {
+                border-color: #ff0066;
+            }
+            100% {
+                border-color: #00ccff;
+            }
+        }
+
+        /* Style de la bannière */
+        .banniere {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banniere img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+        }
+
+        /* Bouton avec contours lumineux */
+        .bouton {
+            background-color: #444; /* Couleur plus discrète */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+            font-weight: bold;
+            border: 2px solid #00ccff; /* Ajout des contours lumineux */
+            box-shadow: 0 0 15px #00ccff, 0 0 30px #00ccff;
+        }
+
+        .bouton:hover {
+            background-color: #00ccff; /* Couleur au survol */
+            transform: scale(1.05); /* Légère mise en avant au survol */
+            box-shadow: 0 0 30px #ff0066, 0 0 60px #ff0066; /* Effet lumineux au survol */
+        }
+
+        /* Lecteur MP3 */
+        .lecteur {
+            grid-column: span 1;
+            background-color: #222;
+            padding: 20px;
+            border: 2px solid #00ccff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #ff0066;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .lecteur audio {
+            width: 100%;
+            border: none;
+        }
+
+        /* Media Queries pour mobile */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+            }
+
+            .titre {
+                font-size: 28px;
+            }
+
+            .lecteur, .banniere, .description {
+                padding: 10px;
+            }
+
+            .bouton {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fond animé avec des paillettes -->
+    <div class="background"></div>
+
+    <!-- Conteneur principal -->
+    <div class="container">
+        <!-- Titre principal -->
+        <div class="titre glow">IA Musique</div>
+
+        <!-- Description de la musique IA -->
+        <div class="description">
+            <p>Découvrez la puissance de la musique créée et remasterisée par l'intelligence artificielle.</p>
+            <p>Plongez dans une expérience musicale unique et innovante avec des sons futuristes.</p>
+        </div>
+
+        <!-- Bannière -->
+        <div class="banniere">
+            <img src="images/bannières.png" alt="Bannière IA Musique" class="glow">
+        </div>
+
+        <!-- Bouton pour découvrir plus -->
+        <a href="music.html" class="bouton glow">Découvrir plus</a>
+
+        <!-- Lecteur MP3 -->
+        <div class="lecteur glow">
+            <p>Écoutez un extrait :</p>
+            <audio controls>
+                <source src="music/joublie tout.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas cet élément audio.
+            </audio>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Animation de fond */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fond animé */
+.background {
+    background: linear-gradient(270deg, #1e1e1e, #3e3e3e, #1e1e1e);
+    background-size: 600% 600%;
+    animation: backgroundAnimation 15s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Style du titre */
+.titre {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    color: #f0f0f0;
+}
+
+/* Description de la musique IA */
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #ccc;
+    border: 1px solid #444;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Style de la bannière */
+.banniere img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Lecteur MP3 */
+.lecteur {
+    margin-top: 30px;
+}
+
+.lecteur p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.lecteur audio {
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet de bouton */
+.bouton {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: #0056b3;
+}
